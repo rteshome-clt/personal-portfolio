@@ -1,0 +1,24 @@
+:root {
+    /* Colors */
+    --clr-primary: hsl(344, 49%, 37%);
+    --clr-secondary: hsl(338, 50%, 50%);
+    --clr-third: hsl(338, 40%, 58%);
+    --clr-fourth: hsl(338, 45%, 73%);
+    --clr-text: hsl(28, 11%, 32%);
+    --clr-text2: hsla(28, 11%, 32%, 0.75);
+
+    /* Font Sizes */
+    --fs-h1: 3.815rem;
+    --fs-h2: 3.052rem;
+    --fs-h3: 2.441rem;
+    --fs-h4: 1.953rem;
+    --fs-h5: 1.563rem;
+    --fs-h6: 1.25rem;
+    --fs-small: 0.8rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
