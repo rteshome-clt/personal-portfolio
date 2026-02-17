@@ -6,94 +6,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  href="css/style.css">
-    <title>Ruth Teshome | Portfolio</title>
+    <link rel="stylesheet"  href="css/style-pro.css">
+    <title>Project Page</title>
 </head>
-
 <body>
-    
     <header id="header">
         <div>
             <img src="images/logo.png" class="logo" alt="Ruth Teshome's Logo">
             <h1>My Portfolio</h1>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html"> Landing Page</a></li>
-                    <li><a href="project.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <li><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                    </svg> Project Page</a></li>
+                    </svg> Landing Page</a></li>
+                    <li><a href="project.html"> Project Page</a></li>
                 </ul> 
             </nav>
         </div>
     </header>
 
-    <main class="main">
-        <section id="hero" class="hero">
-            <div>
-                <h2>Hi, my name is Ruth Teshome!</h2>
-                <h2>I am looking for an internship.</h2>
-            </div>
-
-            <a href="#contact" class="cfs">Contact Me</a>
+    <main>
+        <section class="description">
+            <h2>Projects</h2>
+            <p>Below are a few projects I've worked on.</p>
         </section>
+        
+        <section class="projects">
+            <nav name="project1">
+                <h3>Project 1: Responsive Testimonials Layout</h3>
+                <img src="images/project1.jpg" alt="Picture of Project 1"/>
+                <p>This project demonstrates the use of semantic HTML5 and custom CSS to create a responsive, card-based testimonials layout. 
+                    CSS Grid and Flexbox are used to support both single-column and multi-column layouts, ensuring readability and consistency across different screen sizes.</p>
+            </nav>
 
-        <div class="about">
-            <section id="about" class="aboutme">
-                <div class="item-wrapper">
-                    <div class="heading">About Me</div>
-                    <div class="item">
-                        <p>
-                        I am a junior at UNCC majoring in computer science.
-                        I am concentrating on cybersecuirty but am also interest in AI and web development.
-                        I hope to become a devloper.
-                        </p>
-                    </div>
-                </div>   
-                <div class="item-wrapper">  
-                <div class="heading">Skills</div>
-                    <div class="item">
-                        <ul class="skills-list">
-                            <li>HTML & CSS</li>
-                            <li>JavaScript</li>
-                            <li>Java</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            <nav name="project2">
+                <h3>Project 2: Coffee Shop Website</h3>
+                <img src="images/project2.jpg" alt="Picture of Project 2"/>
+                <p>This project is a static coffee shop website built with HTML and CSS that includes an about section, menu, and location information. 
+                    It uses semantic HTML and structured layouts to present menu items and contact details clearly.</p>
+            </nav>
 
-            <section id="contact">
-                <h2>Contact Me</h2>
-                <div class="contact">
-                    <p><strong>Email:</strong><a href="mailto:rteshome@charlotte.edu"> rteshome@charlotte.edu</a></p>
-                    <p><strong>Phone:</strong><a href="tel:7041111111">704-111-1111</a></p>
-                </div>
+            <nav name="project3">
+                <h3>Project 3: Enigma Machine Simulator</h3>
+                <img src="images/project3.jpg" alt="Picture of Project 3"/>
+                <p>This project is a Java-based Enigma Machine simulator that encrypts and decrypts messages using rotor-based substitution. 
+                    It models the behavior of the historical Enigma machine through object-oriented design.</p>
+            </nav>
 
-                <form class="form" action="#" method="post">
-                    <div>
-                        <label for="name">Name </label>
-                        <input id="name" name="name" type="text" required minlength="2" maxlength="60">
-                    </div>
+            <nav name="project4">
+                <h3>Project 4: Blog API</h3>
+                <img src="images/project4.jpg" alt="Picture of Project 4"/>
+                <p>This project demonstrates the development of a RESTful API using Node.js and Express with a layered architecture. 
+                    The API supports full CRUD operations for blog posts and reinforces concepts such as routing, middleware, and server-side data management.</p>
+            </nav>
 
-                    <div>
-                        <label for="email">Email </label>
-                        <input id="email" name="email" type="email" required>
-                    </div>
-
-                    <div>
-                        <label for="subject">Subject </label>
-                        <input id="subject" name="subject" type="text" required maxlength="80">
-                    </div>
-
-                    <div>
-                        <label for="message">Message </label>
-                        <textarea id="message" name="message" rows="5" required maxlength="500"></textarea>
-                    </div>
-
-                    <button type="submit">Send Message</button>
-                </form>
-            </section>
-       </div>
+            <nav name="project5">
+                <h3>Project 5: Niner Coffee House Website</h3>
+                <img src="images/project5.jpg" alt="Picture of Project 5"/>
+                <p>This project is a static coffee shop website built with HTML and CSS that includes an about section, menu, and location information. 
+                    It uses semantic HTML and structured layouts to present menu items and contact details clearly.</p>
+            </nav>
+        </section>
+        
     </main>
 
     <footer class="footer">
@@ -121,6 +95,5 @@
             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
             </svg></div></a>
     </footer>
-
 </body>
 </html>

@@ -17,7 +17,6 @@
     --fs-small: 0.8rem;
     
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -39,10 +38,6 @@ h2 {
     font-size: 2rem;
 }
 
-#hero, .aboutme, .item-wrapper, #contact{
-    display: flex;
-    flex-direction: column;
-}
 /* Header Section */
 header > div{
     width: 100%;
@@ -108,130 +103,51 @@ main {
 }
 
 section {
-    padding: 2rem;
+    padding: 1rem;
+    font-weight: 500;
+    text-align: center;
 }
 
-/* Hero Section */
-#hero {
-    height: 60vh;
-    min-height: 350px;
-    background-image: url('../images/hero.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    color: var(--clr-text2);
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    
-}
-
-#hero a {
-    text-decoration: none;
-}
-
-.cfs {
-    background-color: var(--clr-secondary);
-    color: white;
-    padding: 0.5rem 1rem;
-    font-size: var(--fs-h5);
-    text-decoration: none;
-    display: inline-block;
-}
-
-.cfs:hover {
-    background-color: var(--clr-primary);
-}
-
-/* About Me */
-.about {
+/* Projects */
+.projects {
     width: 90%;
-    margin: 1rem auto;
-    max-width: 1200px;
-    gap: 4rem;
+    margin: 0 auto 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.aboutme {
-    gap: 2rem;
+.projects nav {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    align-items: start;
-}
-
-.item-wrapper {
-    box-shadow: rgba(0,0,0,0.5) 0px 5px 15px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.item {
-    background-color: var(--clr-primary);
-    padding: 2rem;
-}
-
-.heading {
-    background-color: var(--clr-third);
-    color: black;
-    padding: 0.5em 0.7em;
-    font-weight: 700;
-}
-
-.skills-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 0.75rem 0 0 0;
-}
-
-.skills-list li {
-    margin: 0.35rem 0;
-}
-
-/* Contact Section */
-.contact a {
-    text-decoration: none;
-    color: var(--clr-text2);
-}
-
-.contact a:hover {
-    color: var(--clr-primary)
-}
-
-/* Form */
-form {
+    grid-template-areas:
+    "title title"
+    "image  text";
+    gap: 2rem;
+    align-items: center;
     background-color: var(--clr-fourth);
     padding: 2rem;
-    border-radius: 4px;
+    border-radius: 12px;
+    box-shadow: rgba(0,0,0,0.25) 0px 5px 15px;
 }
 
-input, textarea {
+.projects nav h3 {
+    grid-area: title;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.projects nav p {
+    grid-area: text;
+    margin-top: 0.5rem;
+    color: var(--clr-text2)
+}
+
+.projects img {
+    grid-area: image;
     width: 100%;
-    padding: 0.2em;
-}
-
-label {
-    color: var(--clr-text2);
-}
-
-input, textarea, button {
-    font: inherit;
-    border: none;
-    border-radius: 4px;
-}
-
-input {
-    line-height: 3;
-}
-
-button {
-    background-color: var(--clr-secondary);
-    padding: 0.5em 3em;
-    align-self: end;
-    color: white;
-}
-
-button:hover {
-    background-color: var(--clr-primary)
+    height: auto;
+    border-radius: 8px;
 }
 
 /* Footer Section */
@@ -271,4 +187,3 @@ footer a:hover{
     bottom: 0;
     right: 0;
 }
-
