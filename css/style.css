@@ -187,6 +187,18 @@ section {
     margin: 0.35rem 0;
 }
 
+.arrow {
+    display: inline-block;
+    margin-right: 0.5rem;
+    animation: move 1.1s infinite ease-in-out;
+}
+
+@keyframes move {
+    0%{transform: translateX(0);}
+    50%{transform: translate(10px);}
+    100%{transform: translate(0);}
+}
+
 /* Contact Section */
 .contact a {
     text-decoration: none;
@@ -271,4 +283,131 @@ footer a:hover{
     bottom: 0;
     right: 0;
 }
+
+/* Responsive Web Design */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+@media (min-width: 1024px) {
+    section{
+        padding: 2.5rem;
+    }
+    .about {
+        width: 80%
+    }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --fs-h1: 3rem;
+    --fs-h2: 2.4rem;
+    --fs-h3: 2rem;
+    --fs-h6: 1.1rem;
+  }
+
+  header > div {
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  #hero {
+    height: 50vh;
+    min-height: 300px;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .aboutme {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .item {
+    padding: 1.5rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --fs-h1: 2.2rem;
+    --fs-h2: 1.8rem;
+    --fs-h3: 1.5rem;
+    --fs-h6: 1rem;
+  }
+
+  header > div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    align-items: center;
+  }
+
+  .navbar a {
+    justify-content: center;
+  }
+
+  #hero {
+    height: auto;
+    min-height: 260px;
+    gap: 1.25rem;
+    padding: 2rem 1rem;
+  }
+
+  .cfs {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  section {
+    padding: 1.25rem;
+  }
+
+  .about {
+    width: 92%;
+    gap: 2rem;
+  }
+
+  .item {
+    padding: 1.25rem;
+  }
+
+  input {
+    line-height: 2.6;
+  }
+
+  button {
+    width: 100%;
+    align-self: stretch;
+    padding: 0.8em 1em;
+  }
+
+  footer ul {
+    flex-wrap: wrap;
+  }
+
+  .upper-arrow {
+    padding: 0.75em 1em;
+    font-size: 1rem;
+  }
+}
+
 
