@@ -30,13 +30,20 @@ body {
     font-size: var(--fs-h6);
     line-height: 1.5;
     background-color: var(--clr-fourth);
-}
-html {
-    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-h2 {
-    font-size: 2rem;
+main { 
+    flex: 1; 
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
 }
 
 #hero, .aboutme, .item-wrapper, #contact{
@@ -72,6 +79,10 @@ header > div{
     color: var(--clr-primary);
 }
 
+.navbar a:active {
+    transform: translateY(1px);
+}
+
 .navbar ul {
     list-style: none;
     margin: 0;
@@ -101,6 +112,13 @@ h2 {
 h3 {
     font-size: var(--fs-h3);
 }
+
+p {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* Main Section */
 main {
@@ -246,6 +264,10 @@ button:hover {
     background-color: var(--clr-primary)
 }
 
+button:active {
+    transform: translateY(1px);
+}
+
 /* Footer Section */
 footer {
     width: 100%;
@@ -255,6 +277,9 @@ footer {
     color: var(--clr-text);
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
 }
 
 footer a {
@@ -268,6 +293,23 @@ footer ul {
     justify-content: center;
     list-style: none;
 }
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+
+footer h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 0.5rem;
+}
+
 
 footer a:hover{
     text-decoration: underline;
@@ -298,7 +340,7 @@ body {
         padding: 2.5rem;
     }
     .about {
-        width: 80%
+        width: 80%;
     }
 }
 
