@@ -1,11 +1,14 @@
 :root {
     /* Colors */
-    --clr-primary: hsl(338, 44%, 55%);
-    --clr-secondary: hsl(11, 62%, 15%);
-    --clr-third: hsl(338, 21%, 57%);
-    --clr-fourth: hsl(306, 11%, 61%);
-    --clr-text: hsl(32, 44%, 17%);
-    --clr-text2: hsl(17, 40%, 34%);
+    --clr-primary: hsl(340, 62%, 73%);      /* main pink */
+    --clr-primary-dark: hsl(340, 42%, 58%); /* deeper pink for hover/details */
+    --clr-secondary: hsl(347, 32%, 24%);    /* dark rose-brown */
+    --clr-third: hsl(338, 45%, 88%);        /* soft header/footer pink */
+    --clr-fourth: hsl(330, 40%, 96%);       /* page background */
+    --clr-surface: hsl(0, 0%, 100%);        /* cards/forms */
+    --clr-border: hsl(338, 28%, 82%);       /* soft border */
+    --clr-text: hsl(345, 22%, 20%);         /* main text */
+    --clr-text2: hsl(345, 18%, 35%);        /* secondary text */
 
     /* Font Sizes */
     --fs-h1: 3.815rem;
@@ -62,7 +65,7 @@ header > div{
 }
 
 .logo {
-    height: 90px;
+    height: 70px;
     width: auto;
 }
 

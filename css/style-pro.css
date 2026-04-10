@@ -1,11 +1,14 @@
 :root {
     /* Colors */
-    --clr-primary: hsl(338, 44%, 55%);
-    --clr-secondary: hsl(11, 62%, 15%);
-    --clr-third: hsl(338, 21%, 57%);
-    --clr-fourth: hsl(306, 11%, 61%);
-    --clr-text: hsl(32, 44%, 17%);
-    --clr-text2: hsl(17, 40%, 34%);
+    --clr-primary: hsl(340, 62%, 73%);      /* main pink */
+    --clr-primary-dark: hsl(340, 42%, 58%); /* deeper pink for hover/details */
+    --clr-secondary: hsl(347, 32%, 24%);    /* dark rose-brown */
+    --clr-third: hsl(338, 45%, 88%);        /* soft header/footer pink */
+    --clr-fourth: hsl(330, 40%, 96%);       /* page background */
+    --clr-surface: hsl(0, 0%, 100%);        /* cards/forms */
+    --clr-border: hsl(338, 28%, 82%);       /* soft border */
+    --clr-text: hsl(345, 22%, 20%);         /* main text */
+    --clr-text2: hsl(345, 18%, 35%);        /* secondary text */
 
     /* Font Sizes */
     --fs-h1: 3.815rem;
@@ -17,6 +20,7 @@
     --fs-small: 0.8rem;
     
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -27,17 +31,32 @@
 body {
     color: var(--clr-text);
     font-size: var(--fs-h6);
-    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
     background-color: var(--clr-fourth);
-    height: 100%; 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
 }
 
 main{ 
-    flex: 1; 
+    width: 90%;
+    max-width: 1300px;
+    margin: 2rem auto;
 }
+
+.description {
+    text-align: center;
+}
+
+.description h2 {
+    margin-bottom: 0.5rem;
+    color: var(--clr-secondary);
+}
+
+.description > p {
+    margin-bottom: 2rem;
+    color: var(--clr-text2);
+}
+
+.project
 
 html {
     scroll-behavior: smooth;
@@ -216,97 +235,62 @@ footer a:hover{
     right: 0;
 }
 
-/* Responsive Web Design */
-img, video {
-  max-width: 100%;
-  height: auto;
+/* FIX BACKGROUND (optional but better look) */
+:root {
+    --clr-fourth: hsl(330, 25%, 92%);
 }
 
-body {
-  overflow-x: hidden;
+/* GRID LAYOUT */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-@media (min-width: 1024px) {
-    section{
-        padding: 2rem;
-    }
-    .projects {
-        padding: 2.5rem;
+/* PROJECT CARDS */
+.project-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE */
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.project-card h3 {
+    margin: 1rem;
+    color: var(--clr-secondary);
+}
+
+.project-card p {
+    margin: 0 1rem 1.5rem;
+    color: var(--clr-text2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 900px) {
-    :root {
-        --fs-h1: 3rem;
-        --fs-h2: 2.4rem;
-        --fs-h3: 2rem;
-        --fs-h6: 1.1rem;
-    }
-
-    header > div {
-        padding: 0.75rem 1rem;
-        gap: 1rem;
-    }
-
-    .logo {
-        height: 70px;
-    }
-
-    .projects nav {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "title"
-            "image"
-            "text";
-        gap: 1.25rem;
-        text-align: left;
-    }
-
-    .projects nav p {
-        margin-top: 0;
-    }
-}
 @media (max-width: 600px) {
-    :root {
-        --fs-h1: 2.2rem;
-        --fs-h2: 1.8rem;
-        --fs-h3: 1.5rem;
-        --fs-h6: 1rem;
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
-
-    header > div {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .navbar ul {
-        align-items: center;
-    }
-
-    .navbar a {
-        justify-content: center;
-    }
-
-    .projects {
-        width: 92%;
-        gap: 2rem;
-    }
-
-    .projects nav {
-        padding: 1.25rem;
-    }
-
-    footer ul {
-        flex-wrap: wrap;
-    }
-
-    .upper-arrow {
-        padding: 0.75em 1em;
-        font-size: 1rem;
-    }
-    
 }
